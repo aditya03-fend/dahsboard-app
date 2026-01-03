@@ -9,6 +9,10 @@ export type ProductTableProps = {
   products: Product[]
 }
 
+export type ProductClientProps = {
+  products: Product[]
+}
+
 export type ProductFilterProps = {
   search: string
   onSearchChange: (value: string) => void
