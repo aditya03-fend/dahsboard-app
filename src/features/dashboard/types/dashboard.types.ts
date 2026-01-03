@@ -1,4 +1,3 @@
-
 export interface SidebarProps {
   open?: boolean;
   onClose?: () => void;
@@ -7,4 +6,8 @@ export interface SidebarProps {
 
 export interface NavbarProps {
   onMenuClick?: () => void;
+}
+
+export interface LayoutProps {
+  children: React.ReactNode;
 }
