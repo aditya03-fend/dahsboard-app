@@ -1,7 +1,7 @@
 "use client";
 
 import { Menu } from "lucide-react";
-import { LogoutButton } from "../ui/LogoutButton";
+import { LogoutButton } from "../LogoutButton";
 import { NavbarProps } from "../../types/dashboard.types";
 
 export function Navbar({ onMenuClick }: NavbarProps) {
