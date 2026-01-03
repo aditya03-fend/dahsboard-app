@@ -3,3 +3,7 @@ export type AuthState = {
   login: () => void;
   logout: () => void;
 };
+
+export interface AuthCardProps {
+    handleLogin: () => void
+}
