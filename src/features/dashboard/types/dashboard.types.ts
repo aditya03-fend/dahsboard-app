@@ -24,6 +24,11 @@ export type ProductPaginationProps = {
   onPageChange: (page: number) => void
 }
 
+export type ErrorProps = {
+  error: Error & { digest?: string }
+  reset: () => void
+}
+
 export interface SidebarProps {
   open?: boolean;
   onClose?: () => void;
