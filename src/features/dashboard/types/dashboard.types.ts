@@ -5,6 +5,10 @@ export type Product = {
   category: string;
 };
 
+export type ProductTableProps = {
+  products: Product[]
+}
+
 export interface SidebarProps {
   open?: boolean;
   onClose?: () => void;
