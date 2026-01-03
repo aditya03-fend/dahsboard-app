@@ -14,6 +14,12 @@ export type ProductFilterProps = {
   onSearchChange: (value: string) => void
 }
 
+export type ProductPaginationProps = {
+  page: number
+  totalPages: number
+  onPageChange: (page: number) => void
+}
+
 export interface SidebarProps {
   open?: boolean;
   onClose?: () => void;
