@@ -9,6 +9,11 @@ export type ProductTableProps = {
   products: Product[]
 }
 
+export type ProductFilterProps = {
+  search: string
+  onSearchChange: (value: string) => void
+}
+
 export interface SidebarProps {
   open?: boolean;
   onClose?: () => void;
