@@ -2,16 +2,15 @@ import { ProductClient } from "@/features/dashboard/components/ProductClient";
 import { Product } from "@/features/dashboard/types/dashboard.types";
 
 async function fetchProducts(): Promise<Product[]> {
-  const res = await fetch("https://fakestoreapi.com/products", {
-    cache: "no-store",
+  const res = await fetch("https://dummyjson.com/products", {
+    next: { revalidate: 60 },
   });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch products");
-  }
+  if (!res.ok) throw new Error("Failed to fetch");
 
-  const data: Product[] = await res.json();
-  return data;
+  const data = await res.json();
+  
+  return data.products; 
 }
 
 export default async function DashboardPage() {
