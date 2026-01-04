@@ -30,7 +30,11 @@ export function ProductTable({ products }: Props) {
           <TableRow>
             <TableHead>Name</TableHead>
             <TableHead>Category</TableHead>
-            <TableHead className="text-right">Price</TableHead>
+            <TableHead>Price</TableHead>
+            <TableHead>Discount</TableHead>
+            <TableHead>Rating</TableHead>
+            <TableHead>Stock</TableHead>
+            <TableHead className="text-right">Brand</TableHead>
           </TableRow>
         </TableHeader>
 
@@ -41,8 +45,12 @@ export function ProductTable({ products }: Props) {
                 {product.title}
               </TableCell>
               <TableCell>{product.category}</TableCell>
+              <TableCell>{product.price}</TableCell>
+              <TableCell>{product.discountPercentage}</TableCell>
+              <TableCell>{product.rating}</TableCell>
+              <TableCell>{product.stock}</TableCell>
               <TableCell className="text-right">
-                ${product.price}
+                {product.brand}
               </TableCell>
             </TableRow>
           ))}
