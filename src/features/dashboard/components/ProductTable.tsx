@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Table,
@@ -7,20 +7,16 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
-import { Product } from "@/features/dashboard/types/dashboard.types"
+} from "@/components/ui/table";
+import { Product } from "@/features/dashboard/types/dashboard.types";
 
 type Props = {
-  products: Product[]
-}
+  products: Product[];
+};
 
 export function ProductTable({ products }: Props) {
   if (products.length === 0) {
-    return (
-      <p className="text-sm text-muted-foreground">
-        No products found.
-      </p>
-    )
+    return <p className="text-sm text-muted-foreground">No products found.</p>;
   }
 
   return (
@@ -41,21 +37,21 @@ export function ProductTable({ products }: Props) {
         <TableBody>
           {products.map((product) => (
             <TableRow key={product.id}>
-              <TableCell className="font-medium">
-                {product.title}
-              </TableCell>
+              <TableCell className="font-medium">{product.title}</TableCell>
               <TableCell>{product.category}</TableCell>
               <TableCell>{product.price}</TableCell>
               <TableCell>{product.discountPercentage}</TableCell>
               <TableCell>{product.rating}</TableCell>
               <TableCell>{product.stock}</TableCell>
-              <TableCell className="text-right">
-                {product.brand}
-              </TableCell>
+              {product.brand ? (
+                <TableCell className="text-right">{product.brand}</TableCell>
+              ) : (
+                <TableCell className="text-right">No Brand</TableCell>
+              )}
             </TableRow>
           ))}
         </TableBody>
       </Table>
     </div>
-  )
+  );
 }
