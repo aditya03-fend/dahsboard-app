@@ -1,8 +1,12 @@
 export type Product = {
   id: number;
   title: string;
-  price: number;
   category: string;
+  price: number;
+  discountPercentage: number;
+  rating: number;
+  stock: number;
+  brand: string;
 };
 
 export type ProductTableProps = {
