@@ -6,7 +6,7 @@ export type Product = {
   discountPercentage: number;
   rating: number;
   stock: number;
-  brand: string;
+  brand?: string;
 };
 
 export type ProductTableProps = {
